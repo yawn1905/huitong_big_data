@@ -1,0 +1,43 @@
+@import '~antd/es/style/themes/default.less';
+
+// 重置内边距
+.resetPadding {
+  padding: 0;
+}
+#Monitor {
+  div[name='blockArea-1'] {
+    margin-bottom: @margin-lg;
+    .rightCard {
+      height: 100%;
+      :global {
+        .ant-pro-card-body {
+          margin: 0 !important;
+          .ant-pro-card-col {
+            flex: 1;
+            padding: 0 !important;
+            .ant-pro-card {
+              height: 100%;
+            }
+          }
+          .ant-pro-card-col:nth-child(1) {
+            margin-bottom: 12px;
+          }
+          .ant-pro-card-col:nth-child(2) {
+            margin-top: 12px;
+          }
+        }
+      }
+    }
+    .GaugeChartWrap {
+      height: 180px;
+    }
+    .detailsOfTheEvent-StatisticCard {
+      :global {
+        .ant-pro-card-header,
+        .ant-pro-card-body {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

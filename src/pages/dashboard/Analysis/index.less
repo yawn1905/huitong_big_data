@@ -1,0 +1,119 @@
+@import '~antd/es/style/themes/default.less';
+@bottom: 24px;
+#SelectDatePicker {
+  padding-right: 24px;
+  :global {
+    .ant-tabs-nav::before {
+      display: none;
+    }
+    .ant-tabs-nav-list {
+      margin-top: 0;
+    }
+    .ant-tabs-tab {
+      padding: 8px 10px;
+      background: transparent;
+      border-color: transparent;
+    }
+    .ant-tabs-tab-active {
+      background: #fff;
+      border-color: #fff;
+    }
+    .ant-space > .ant-space-item:nth-child(2) {
+      width: 250px;
+    }
+  }
+}
+
+#analysis {
+  .blockArea_1_description {
+    display: flex;
+    align-items: center;
+    :global(.ant-pro-card-statistic) {
+      margin-right: 16px;
+    }
+    :global(.ant-pro-card-statistic + .ant-pro-card-statistic) {
+      margin-top: 0;
+    }
+  }
+  // 布局分区1
+  & > div[name='blockArea-1'] {
+    margin-bottom: @bottom;
+  }
+  // 布局分区2
+  & > div[name='blockArea-2'] {
+    margin-bottom: @bottom;
+    :global {
+      .ant-list-sm .ant-list-item {
+        padding: 8px 0;
+      }
+      .ant-list-header {
+        padding-top: 0;
+      }
+    }
+    .chartWrap {
+      width: 100%;
+      height: 300px;
+    }
+    .blockArea_2_list_item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%;
+      .blockArea_2_list_item_index_name {
+        .rankingItemNumber {
+          display: inline-block;
+          width: 20px;
+          height: 20px;
+          margin-top: 1.5px;
+          margin-right: 16px;
+          color: rgba(0, 0, 0, 0.85);
+          font-weight: 600;
+          font-size: 12px;
+          line-height: 20px;
+          text-align: center;
+          background-color: #fafafa;
+          border-radius: 20px;
+        }
+        .rankingItemNumberActive {
+          color: #fff;
+          background-color: #314659;
+        }
+      }
+    }
+  }
+  // 布局分区3
+  & > div[name='blockArea-3'] {
+    margin-bottom: @bottom;
+    .blockArea_3_StatisticCard_wrap {
+      :global {
+        .ant-pro-card-header,
+        .ant-pro-card-body {
+          padding: 0;
+        }
+        .ant-pro-card-header {
+          padding-bottom: 12px;
+          .ant-pro-core-label-tip {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+    :global {
+      .ant-pro-core-label-tip-icon {
+        color: rgba(0, 0, 0, 0.45);
+      }
+      .ant-pro-card-statistic-content {
+        display: flex;
+        align-items: center;
+        .ant-pro-card-statistic-layout-vertical {
+          margin-right: 40px;
+        }
+      }
+    }
+  }
+}
+:global(.ant-pro-statistic-card-chart) {
+  margin-top: 0;
+  margin-bottom: 0;
+}
